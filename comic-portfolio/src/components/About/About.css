@@ -1,0 +1,250 @@
+.aboutPage {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aboutPageHeader {
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.aboutPageHeader h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.1vw, 4rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.aboutGrid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: 0.78fr 1fr;
+  gap: 14px;
+}
+
+.aboutPanel {
+  min-height: 0;
+  background: #fff8df;
+  border: 4px solid #111;
+  box-shadow: 6px 6px 0 #111;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aboutMainPanel {
+  grid-row: span 2;
+  background:
+    radial-gradient(circle at 1.5px 1.5px, rgba(0, 0, 0, 0.08) 1.5px, transparent 1.6px),
+    #fff3d1;
+  background-size: 15px 15px, auto;
+}
+
+.aboutKicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  background: #74c8ee;
+  border: 3px solid #111;
+  box-shadow: 4px 4px 0 #111;
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transform: rotate(-1.5deg);
+  flex-shrink: 0;
+}
+
+.aboutPanel h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.aboutMainPanel h3 {
+  margin-bottom: 16px;
+  font-size: clamp(1.7rem, 2.75vw, 2.55rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  max-width: 95%;
+}
+
+.aboutPanelBody {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.aboutPanelBody p {
+  margin: 0 0 14px;
+  font-size: clamp(0.9rem, 0.98vw, 1rem);
+  line-height: 1.35;
+  font-weight: 750;
+}
+
+.aboutPanelBody p:last-child {
+  margin-bottom: 0;
+}
+
+.arcIntro {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  background: #fff3d1;
+  border: 3px solid #111;
+  box-shadow: 4px 4px 0 #111;
+  font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+  line-height: 1.25;
+  font-weight: 850;
+}
+
+.aboutList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aboutList li {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 27px;
+  font-size: clamp(0.82rem, 0.9vw, 0.95rem);
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.aboutList li:last-child {
+  margin-bottom: 0;
+}
+
+.aboutList li::before {
+  content: "!";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 17px;
+  height: 17px;
+  background: #f45a4a;
+  color: #fff8df;
+  border: 3px solid #111;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.aboutArcPanel {
+  justify-content: flex-start;
+}
+
+.aboutTechPanel {
+  justify-content: flex-start;
+}
+
+.aboutTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.aboutTags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  background: #f4d548;
+  border: 3px solid #111;
+  box-shadow: 4px 4px 0 #111;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.aboutTags span:nth-child(2n) {
+  background: #74c8ee;
+}
+
+.aboutTags span:nth-child(3n) {
+  background: #88c85d;
+}
+
+@media (max-width: 980px) {
+  .aboutPage {
+    height: auto;
+    overflow: visible;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .aboutMainPanel {
+    grid-row: auto;
+  }
+
+  .aboutPanel {
+    overflow: visible;
+  }
+
+  .aboutPanelBody {
+    overflow: visible;
+  }
+
+  .aboutMainPanel h3 {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutPageHeader {
+    margin-bottom: 12px;
+  }
+
+  .aboutPageHeader h2 {
+    font-size: clamp(2rem, 12vw, 3.2rem);
+  }
+
+  .aboutPanel {
+    padding: 16px;
+    box-shadow: 5px 5px 0 #111;
+  }
+
+  .aboutPanel h3 {
+    font-size: clamp(1.2rem, 6.8vw, 1.8rem);
+  }
+
+  .aboutMainPanel h3 {
+    font-size: clamp(1.55rem, 8vw, 2.2rem);
+  }
+
+  .aboutPanelBody p,
+  .aboutList li {
+    font-size: 0.95rem;
+  }
+
+  .arcIntro {
+    font-size: 0.9rem;
+  }
+
+  .aboutTags span {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+}
